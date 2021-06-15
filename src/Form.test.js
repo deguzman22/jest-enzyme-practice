@@ -12,13 +12,13 @@ describe('Form', () => {
     expect(commentInput.props().value).toEqual('');
 
     commentInput.simulate('change', {
-      target: { value: 'Hello Sider Bakla' }
+      target: { value: 'Hello' }
     });
 
     commentInput = wrapper.find('input').first();
 
     expect(wrapper.find('form').length).toEqual(1);
-    expect(commentInput.props().value).toEqual('Hello Sieder Bakla');
+    expect(commentInput.props().value).toEqual('Hello');
 
     // it will reset the value of comment from useState
     buttonSubmit.simulate('submit', { preventDefault () {} });
